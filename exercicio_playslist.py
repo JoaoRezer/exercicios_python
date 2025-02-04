@@ -58,7 +58,7 @@ def criar_playlist():
     return Playlist(nome_playlist)
 
 def menu():
-    playlist_atual = None  # Start with no playlist
+    playlist_atual = None  
 
     while True:
         print("\n=== Sistema de Gerenciamento de Playlist ===")
@@ -66,7 +66,7 @@ def menu():
         print("2. Adicionar música")
         print("3. Listar músicas")
         print("4. Remover música")
-        print("5. Reproduzir música")  # Added option to play music
+        print("5. Reproduzir música")  
         print("6. Sair")
 
         opcao = input("Escolha uma opção: ").strip()
@@ -90,7 +90,7 @@ def menu():
                 playlist_atual.remover_musica()
             else:
                 print("Crie uma playlist primeiro.")
-        elif opcao == "5":  # Handle music playback
+        elif opcao == "5":  
             if playlist_atual:
                 musica = input('Digite a música que quer reproduzir: ')
                 playlist_atual.reproduzir_musica(musica.lower())
@@ -104,8 +104,3 @@ def menu():
 
 if __name__ == "__main__":
     menu()
-# 🎯 Desafio Extra:
-# Permitir múltiplas playlists usando um dicionário.
-# Criar um menu para interação do usuário.
-# Simular a reprodução aleatória de músicas.
-# Quer que eu adicione alguma funcionalidade extra? 🚀
